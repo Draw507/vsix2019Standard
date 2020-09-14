@@ -8,115 +8,33 @@ namespace com.draw507.web
         // Para obtener más información sobre las uniones, visite https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+            bundles.Add(new StyleBundle("~/Content/appcss").Include(
+                      "~/Content/lib/bootstrap/dist/css/bootstrap.min.css",
+                      "~/Content/lib/theme/assets/css/plugins.css",
+                      "~/Content/lib/theme/plugins/animate/animate.min.css",
+                      "~/Content/lib/theme/plugins/sweetalerts/sweetalert2.min.css",
+                      "~/Content/lib/theme/plugins/sweetalerts/sweetalert.css",
+                      "~/Content/lib/theme/plugins/perfect-scrollbar/perfect-scrollbar.css",
+                      "~/Content/lib/theme/plugins/highlight/styles/monokai-sublime.css",
+                      "~/Content/app.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+            bundles.Add(new ScriptBundle("~/bundles/appjs").Include(
+                      "~/Scripts/lib/jquery/dist/jquery.min.js",
+                      "~/Scripts/lib/bootstrap/dist/js/popper.min.js",
+                      "~/Scripts/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+                      "~/Scripts/lib/theme/plugins/perfect-scrollbar/perfect-scrollbar.min.js",
+                      "~/Scripts/lib/theme/plugins/sweetalerts/sweetalert2.min.js",
+                      "~/Scripts/lib/theme/plugins/sweetalerts/custom-sweetalert.js",
+                      "~/Scripts/lib/theme/assets/js/app.js",
+                      "~/Scripts/lib/theme/assets/js/custom.js",
+                      "~/Scripts/app.js"));
 
-            // Utilice la versión de desarrollo de Modernizr para desarrollar y obtener información. De este modo, estará
-            // para la producción, use la herramienta de compilación disponible en https://modernizr.com para seleccionar solo las pruebas que necesite.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/perfect-scrollbar.jquery.min.js",
-                      "~/Scripts/material.min.js",
-                      "~/Scripts/bootstrap-notify.js",
-                      "~/Scripts/material-dashboard.js",
-                      "~/Scripts/respond.js",
-                      "~/Scripts/pnotify.custom.min.js",
-                      "~/Scripts/niif.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/dataTables").Include(
-                        "~/Scripts/DataTables/jquery.dataTables.js",
-                        "~/Scripts/DataTables/dataTables.responsive.js",
-                        "~/Scripts/DataTables/dataTables.bootstrap.js",
-                        "~/Scripts/DataTables/responsive.bootstrap.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/pd").Include(
-                        "~/Scripts/niff-pd.js",
-                        "~/Scripts/niif-export.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/ead").Include(
-                        "~/Scripts/niif-ead.js",
-                        "~/Scripts/niif-export.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/lgd").Include(
-                        "~/Scripts/niif-lgd.js",
-                        "~/Scripts/niif-export.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/pdss").Include(
-                        "~/Scripts/niff-pdss.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/eadss").Include(
-                        "~/Scripts/niif-eadss.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/lgdss").Include(
-                        "~/Scripts/niif-lgdss.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/revisionFormularios").Include(
-                        "~/Scripts/niif-revision-formularios.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/cargaDeDatos").Include(
-                        "~/Scripts/niif-carga.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/auditoria").Include(
-                        "~/Scripts/niif-auditoria.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/segmentos").Include(
-                        "~/Scripts/niif-segmentos.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/tratamientos").Include(
-                        "~/Scripts/niif-tratamientos.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/banca").Include(
-                        "~/Scripts/niif-banca.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/compania").Include(
-                        "~/Scripts/niif-compania.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/sistemas").Include(
-                        "~/Scripts/niif-sistema.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/opesegmentos").Include(
-                        "~/Scripts/niif-opesegmento.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/opecompanias").Include(
-                        "~/Scripts/niif-opecompania.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/opetratamientos").Include(
-                        "~/Scripts/niif-opetratamiento.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/correos").Include(
-                        "~/Scripts/niif-correos.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/datetime").Include(
-                        "~/Scripts/moment.min.js",
-                        "~/Scripts/moment-with-locales.min.js",
-                        "~/Scripts/bootstrap-material-datetimepicker.js"
-                        //"~/Scripts/moment-with-locales.min.js",
-                        //"~/Scripts/bootstrap-datetimepicker.min.js"
-                        ));
-
-            bundles.Add(new StyleBundle("~/Content/datetimecss").Include(
-                      "~/Content/bootstrap-material-datetimepicker.css"));
-
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/material-icons.css",
-                      "~/Content/font-awesome.min.css",
-                      "~/Content/animate.min.css",
-                      "~/Content/material-dashboard.css",
-                      "~/Content/pnotify.custom.min.css",
-                      "~/Content/site.css"));
-
-            bundles.Add(new StyleBundle("~/Content/dataTablescss").Include(
-                      "~/Content/DataTables/css/dataTables.bootstrap.css",
-                      "~/Content/DataTables/css/responsive.bootstrap.css"));
-
+#if DEBUG
+            BundleTable.EnableOptimizations = false;
+#else
             BundleTable.EnableOptimizations = true;
+#endif
+
         }
     }
 }
