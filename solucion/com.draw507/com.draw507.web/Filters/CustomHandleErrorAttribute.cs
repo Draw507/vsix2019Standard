@@ -62,23 +62,5 @@ namespace com.draw507.web.Filters
 
             base.OnException(filterContext);
         }
-
-        /// <summary>
-        /// Valida los mensajes de error segun la excepcion
-        /// </summary>
-        /// <param name="ex">The ex.</param>
-        /// <param name="guid">The unique identifier.</param>
-        /// <returns></returns>
-        //public string ValidateMessageError(Exception ex, string guid)
-        //{
-        //    string message = string.Format("{0} {1}", RecursosLocalizables.StringResources.ErrorInesperado, guid);
-
-        //    if (ex is AppException)
-        //    {
-        //        message = ex.Message + " " + RecursosLocalizables.StringResources.ErrorInesperado + guid;
-        //    }
-
-        //    return message;
-        //}
     }
 }
